@@ -3,6 +3,7 @@ package it.polito.tdp.artsmia.db;
 import java.util.List;
 
 import it.polito.tdp.artsmia.model.ArtObject;
+import it.polito.tdp.artsmia.model.Artists;
 import it.polito.tdp.artsmia.model.Exhibition;
 
 public class TestArtsmiaDAO {
@@ -21,6 +22,13 @@ public class TestArtsmiaDAO {
 		System.out.println(exhibitions.get(0));
 		System.out.println(exhibitions.size());
 
+		System.out.println("Stampo qualcosa:\n");
+		for( Artists a: dao.getArtists("Photographer")) {
+			System.out.println(a.toString()+"\n");
+		}
+		
+		//mappaArtisti
+		//dao.getCollegamenti("Photographer", mappaArtisti);
 	}
 
 }
